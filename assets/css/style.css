@@ -143,11 +143,34 @@ body {
   flex-wrap: wrap;
 }
 
-.project {
+.all-projects img {
   border:#dd43b7 solid 3px;
-  height: 300px;
-  width: 300px;
   margin: 10px;
+  opacity: 60%;
+  object-fit: cover;
+  height: 300px;
+  width: 600px
+  position: relative;
+}
+
+.project-text {
+  background-color: #dd43b7;
+  color: aliceblue;
+  width: 30%;
+  padding-bottom: 1px;
+  z-index: 50;
+}
+
+.all-projects h3 {
+  padding: 10px 10px 0 10px;
+  font-size: 24px;
+}
+
+.all-projects h4 {
+  padding: 0 10px 10px 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 0;
 }
 
 
