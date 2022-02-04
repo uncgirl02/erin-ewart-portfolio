@@ -24,9 +24,11 @@ body {
   header h1 {
     font-weight: bold;
     margin: 0;
-    font-size: 46px;
-    color: #42a8fc;
-    text-shadow: 5px 5px 10px rgba(232, 248, 11, 0.5);
+    font-size: 60px;
+    color: black;
+    text-shadow: 5px 5px 10px rgba(37, 36, 36, 0.5);
+    background: #42a8fc;
+    padding: 5px 15px;
   }
 
   header a {
@@ -64,25 +66,31 @@ body {
   /* HERO STYLES START */
 
 .hero {
-    background-image: url('../images/hero-img.jfif');
+    background-image: url('../images/hero-img.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-attachment: fixed;
+  }
+
+  .hero img {
+    height: 250px;
+    width: auto;
+    border: 3px solid black;
+    margin: 15px 25px;
   }
 
   .hero-tagline {
-    color:#024e76;
-    border: 3px solid #024e76;
-    background-color: rgba(223, 235, 66, 0.8);
+    color:black;
+    border: 3px solid black;
+    background-color: rgba(221, 67, 183, 0.8);
     padding: 3px 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    left: 800px;
-    top: 100px;
-    width: 35%;
-    height: 70px;
     text-align: center;
+    margin: 50px 20px;
   }
 
 /* ABOUT ME STYLES */
@@ -91,8 +99,8 @@ body {
   background-color: black;
   background-size: cover;
   display: flex;
-  justify-content: space-around;
-  margin-top: 150px;
+  justify-content: space-between;
+  margin-top: 10%;
 }
 
 .intro h2 {
@@ -102,7 +110,7 @@ body {
   padding: 20px;
   background-color: black;
   background-size: cover;
-  margin: 0;
+  margin: 10px;
   text-align: right;
 }
 
@@ -110,7 +118,7 @@ body {
   line-height: 1.7;
   color: #42a8fc;
   width: 70%;
-  margin: 0 auto;
+  margin: 10px auto;
   font-size: 20px;
   text-align: center;
 }
@@ -139,18 +147,22 @@ body {
 
 .all-projects {
   display: flex;
-  justify-content: space-around;
+  justify-content: normal;
   flex-wrap: wrap;
+  width: 70%;
 }
 
-.all-projects img {
+.project img {
   border:#dd43b7 solid 3px;
   margin: 10px;
   opacity: 60%;
   object-fit: cover;
   height: 300px;
-  width: 600px
-  position: relative;
+  width: 600px;
+}
+
+.project img:hover {
+  opacity: 100%
 }
 
 .project-text {
@@ -158,7 +170,6 @@ body {
   color: aliceblue;
   width: 30%;
   padding-bottom: 1px;
-  z-index: 50;
 }
 
 .all-projects h3 {
@@ -173,6 +184,20 @@ body {
   line-height: 0;
 }
 
+.project-one {
+  flex: 2 0 300x
+}
+ 
+.project {
+  position: relative;
+}
+
+.project .project-text {
+  position: absolute;
+  top: 150px;
+  margin: 10px;
+}
+
 
 
   
@@ -181,6 +206,8 @@ body {
 .contact-info {
   background-color: black;
   background-size: cover;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-info h2 {
@@ -199,11 +226,11 @@ body {
   color: #42a8fc;
 }
 
-.contact-info nav {
-  margin: 7px 0;
-}
+/*.anchors {
+  margin: 15px 15px;
+}*/
 
-.contact-info nav ul {
+.anchors ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -211,9 +238,9 @@ body {
   list-style: none;
 }
 
-.contact-info nav ul li a {
+.anchors ul li a {
   padding: 10px 15px;
-  font-weight: light;
+  font-weight: lighter;
   font-size: 1.55vw;
   border-bottom: 3px solid #dd43b7
 }
