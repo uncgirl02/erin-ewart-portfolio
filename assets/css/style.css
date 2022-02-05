@@ -52,7 +52,7 @@ body {
 
   header nav ul li a {
     padding: 10px 25px;
-    font-weight: light;
+    font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.7);
   }
@@ -79,7 +79,6 @@ body {
   }
 
   .hero img {
-    height: 250px;
     width: auto;
     border: 3px solid #dd43b7;
     margin: 25px 40px;
@@ -249,4 +248,62 @@ body {
   font-weight: lighter;
   font-size: 1.55vw;
   border-bottom: 3px solid #dd43b7
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  .hero-img, .hero-tagline {
+    width: 100%;
+  }
+  
+  .hero-tagline {
+    text-align: center;
+  }
+
+  .intro h2, .intro p {
+    width: 100%;
+  }
+  
+  .intro p {
+    text-align: center;
+  }
+  
+  
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+
+@media screen and (max-width: 768px) {
+
+}
+  
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+
+@media screen and (max-width: 575px) {
+  
+  .project-one-img {
+    flex: 0 2 70%;
+  }
 }
