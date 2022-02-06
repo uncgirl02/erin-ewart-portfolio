@@ -71,14 +71,13 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: flex-end;
     background-attachment: fixed;
   }
 
   .hero img {
-    width: auto;
     border: 3px solid #dd43b7;
-    margin: 25px 40px;
+    margin: 30px;
   }
 
   .hero-tagline {
@@ -88,7 +87,8 @@ body {
     padding: 3px 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
-    margin: 200px 30px 30px 30px;
+    height: fit-content;
+    margin: 30px;
   }
 
 /* ABOUT ME STYLES */
@@ -99,7 +99,6 @@ body {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 200px;
   justify-content: center;
 }
 
@@ -174,16 +173,16 @@ body {
   margin: 10px;
   opacity: 60%;
   object-fit: cover;
-  min-width: 97%;
+  min-width: 80%;
 }
 
 .project img:hover {
   opacity: 100%;
 }
 
-/* .project-two, .project-three, .project-four, .project-five {
+.project-two, .project-three, .project-four, .project-five {
   flex: 50%;
-} */
+} 
 
 .project-text {
   background-color: #dd43b7;
@@ -206,12 +205,14 @@ body {
  
 .project-one, .project-two, .project-three, .project-four, .project-five {
   position: relative;
+  max-width: min-content;
 }
 
 .project-one .project-text, .project-two .project-text, .project-three .project-text, .project-four .project-text, .project-five .project-text {
   position: absolute;
   top: 45%;
   margin: 10px;
+  flex: 50%
 }
 
  .project-two img, .project-three img, .project-four img, .project-five img {
@@ -219,7 +220,6 @@ body {
   margin: 10px;
   opacity: 60%;
   object-fit: cover;
-  min-width: 50%;
 } 
 
 
@@ -290,30 +290,70 @@ body {
 
   header nav ul li a {
     font-size: 20px;
+    line-height: 2.5;
+  }
+
+  .hero {
+    justify-content: center;
   }
 
   .hero-img, .hero-tagline {
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
   }
   
   .hero-tagline {
     text-align: center;
   }
 
-  .intro h2, .intro p {
-    width: 100%;
+  .intro, .projects, .contact-info {
+    flex-direction: column;
+    justify-content: center;
   }
   
   .intro p {
     text-align: center;
   }
   
+  .flex-flow {
+    align-items: center;
+  }
   
+  .intro h2, .projects h2, .contact-info h2 {
+    text-align: center;
+  }
+  
+  .all-projects {
+    justify-content: center;
+  }
+
+  .project-one {
+    min-width: initial;
+  }
+
+  .anchors ul li a {
+    font-size: 20px;
+  }
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 
 @media screen and (max-width: 768px) {
+  
+  .anchors ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .anchors ul li a {
+    font-size: 20px;
+    line-height: 2.5;
+  }
+
 
 }
   
@@ -324,4 +364,6 @@ body {
   .project-one-img {
     flex: 0 2 70%;
   }
+
+
 }
