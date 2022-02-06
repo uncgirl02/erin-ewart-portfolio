@@ -27,12 +27,6 @@ body {
     background: #dd43b7;
     padding: 5px 15px;
   }
-
-  header a {
-    text-decoration: none;
-    color: #42a8fc;
-    border-bottom: 3px solid #dd43b7;
-  }
   
   header nav {
     margin: 10px 0;
@@ -46,11 +40,13 @@ body {
     list-style: none;
   }
   
-
   header nav ul li a {
     padding: 10px 25px;
     font-size: 1.55vw;
+    text-decoration: none;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.7);
+    color: #42a8fc;
+    border-bottom: 3px solid #dd43b7;
   }
   
   header nav ul li a:hover {
@@ -59,6 +55,8 @@ body {
     border-radius: 15px;
     text-shadow: none;
   }
+
+  /* HEADER / NAV BAR STYLES END */
 
   /* HERO STYLES START */
 
