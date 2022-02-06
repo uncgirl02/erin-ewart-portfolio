@@ -2,7 +2,7 @@
 
 ## Description
 
-In this project I refactored existing code for the Horiseon website.  I added semantic HTML, organized and removed unnecessary code and made sure all links worked appropriately.  I also added alt text for images to increase user accessibility as well as comments in the HTML and CSS files to increase the readability of the code for future coders.
+In this project I used HTML and CSS to design a website portfolio to showcase my work to future employers.  It includes a section about me, a section with links to my projects, and a section with my contact info. I created a link to my resume, Git Hub, and LinkedIn website. I used media queries to make my website responsive to various screen sizes and used pseudo cases to style the states of different elements.  I also used the :root pseudo class to declare glabal css values for the colors used so I can easily change the color scheme of my page.
 
 ## Languages Used
 
