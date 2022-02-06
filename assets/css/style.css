@@ -286,6 +286,7 @@ body {
     margin-top: 20px;
     width: 100%;
     justify-content: center;
+    padding: 0px;
   }
 
   header nav ul li a {
@@ -319,7 +320,7 @@ body {
   .flex-flow {
     align-items: center;
   }
-  
+
   .intro h2, .projects h2, .contact-info h2 {
     text-align: center;
   }
@@ -328,10 +329,17 @@ body {
     justify-content: center;
   }
 
+  .all-projects.flex-row, .anchors.flex-row, .flex-row {
+    border-left: black 6px solid;
+  }
+
   .project-one {
     min-width: initial;
   }
 
+  .anchors ul {
+    padding: 0px;
+  }
   .anchors ul li a {
     font-size: 20px;
   }
@@ -342,6 +350,20 @@ body {
 @media screen and (max-width: 768px) {
   
   .anchors ul {
+    line-height: 2.5;
+  }
+}
+  
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+
+@media screen and (max-width: 575px) {
+  
+  .project-one img, .project-two img, .project-three img, .project-four img, .project-five img {
+    max-width: 300px;
+    height: 200px;
+  }
+  
+  .anchors ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -349,21 +371,23 @@ body {
     flex-direction: column;
   }
 
+  .project-text {
+    width: 40%;
+  }
   .anchors ul li a {
     font-size: 20px;
     line-height: 2.5;
   }
 
-
-}
+  .all-projects h3 {
+    padding: 2px 3px 0px 10px;
+    font-size: 15px;
+  } 
   
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-
-@media screen and (max-width: 575px) {
-  
-  .project-one-img {
-    flex: 0 2 70%;
-  }
-
-
+  .all-projects h4 {
+    padding: 0 10px 3px 10px;
+    font-size: 12px;
+    font-weight: lighter;
+    line-height: 0.5;
+  } 
 }
