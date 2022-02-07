@@ -1,3 +1,9 @@
+:root {
+  --pink: rgb(152, 36, 187);
+  --black: black;
+  --blue: #2bccfa;
+}
+
 body {
     font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
   }
@@ -6,7 +12,7 @@ body {
 
   header {
     padding: 20px 35px;
-    background-color: black;
+    background-color: var(--black);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -22,10 +28,11 @@ body {
     font-weight: bold;
     margin: 0;
     font-size: 60px;
-    color: black;
+    color: white;
     text-shadow: 5px 5px 10px rgba(37, 36, 36, 0.5);
-    background: #dd43b7;
+    background: var(--pink);
     padding: 5px 15px;
+    border-radius: 15px;
   }
   
   header nav {
@@ -45,13 +52,13 @@ body {
     font-size: 1.55vw;
     text-decoration: none;
     text-shadow: 5px 5px 5px rgba(255, 255, 255, 0.7);
-    color: #42a8fc;
-    border-bottom: 3px solid #dd43b7;
+    color: var(--blue);
+    border-bottom: 3px solid var(--pink);
   }
   
   header nav ul li a:hover {
-    background: #dd43b7;
-    color: black;
+    background: var(--pink);
+    color: var(--black);
     border-radius: 15px;
     text-shadow: none;
   }
@@ -73,25 +80,29 @@ body {
   }
 
   .hero img {
-    border: 3px solid #dd43b7;
+    border: 3px solid var(--pink);
     margin: 30px;
+    border-radius: 15px;
   }
 
   .hero-tagline {
-    color:black;
-    border: 3px solid black;
-    background-color: rgba(221, 67, 183, 0.8);
+    color:white;
+    border: 3px solid white;
+    background-color: rgba(152, 36, 187, 0.8);
     padding: 3px 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
     height: fit-content;
     margin: 30px;
+    border-radius: 15px;
   }
 
-/* ABOUT ME STYLES */
+/* HERO STYLES END */
+
+/* ABOUT ME STYLES START*/
 
 .intro {
-  background-color: black;
+  background-color: var(--black);
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -100,9 +111,10 @@ body {
 }
 
 .flex-row {
-  border-left: 6px solid #42a8fc;
+  border-left: 6px solid var(--blue);
   flex:  70%;
-  margin: 20px
+  margin: 20px;
+  padding: 30px 50px;
 }
 
 .flex-flow {
@@ -111,9 +123,9 @@ body {
 
 .intro h2 {
   font-size: 48px;
-  color: #42a8fc;
+  color: var(--blue);
   padding: 20px;
-  background-color: black;
+  background-color: var(--black);
   background-size: cover;
   text-align: right;
   flex: 1 30%;
@@ -122,10 +134,10 @@ body {
 
 .intro p {
   line-height: 1.7;
-  color: #42a8fc;
+  color: var(--blue);
   font-size: 20px;
   text-align: center;
-  padding: 30px 30px;
+  
   max-width: fit-content;
 }
 
@@ -134,7 +146,7 @@ body {
 /* WORK STYLES START */
 
 .projects {
-  background-color: black;
+  background-color: var(--black);
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -143,9 +155,9 @@ body {
 
 .projects h2 {
   font-size: 48px;
-  color: #42a8fc;
+  color: var(--blue);
   padding: 20px;
-  background-color: black;
+  background-color: var(--black);
   background-size: cover;
   text-align: right;
   flex: 1 30%;
@@ -156,9 +168,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  border-left: 6px solid #42a8fc;
+  border-left: 6px solid var(--blue);
   margin: 20px;
-  padding: 10px;
+  padding: 30px 50px;
 }
 
 .project-one {
@@ -168,23 +180,28 @@ body {
 }
 
 .project-one img {
-  border:#dd43b7 solid 3px;
+  border:var(--pink) solid 3px;
   margin: 10px;
   opacity: 60%;
   object-fit: cover;
-  min-width: 80%;
+  min-width: 84%; 
+  border-radius: 15px;
 }
 
-.project img:hover {
+.project-two img, .project-three img, .project-four img, .project-five img {
+  border:var(--pink) solid 3px;
+  margin: 10px;
+  opacity: 60%;
+  object-fit: cover;
+  border-radius: 15px;
+} 
+
+.project-one img:hover, .project-two img:hover, .project-three img:hover, .project-four img:hover, .project-five img:hover {
   opacity: 100%;
 }
 
-.project-two, .project-three, .project-four, .project-five {
-  flex: 50%;
-} 
-
 .project-text {
-  background-color: #dd43b7;
+  background-color: var(--pink);
   color: white;
   width: 30%;
   padding-bottom: 1px;
@@ -204,28 +221,20 @@ body {
  
 .project-one, .project-two, .project-three, .project-four, .project-five {
   position: relative;
-  max-width: min-content;
 }
 
 .project-one .project-text, .project-two .project-text, .project-three .project-text, .project-four .project-text, .project-five .project-text {
   position: absolute;
   top: 45%;
   margin: 10px;
-  flex: 50%
 }
 
- .project-two img, .project-three img, .project-four img, .project-five img {
-  border:#dd43b7 solid 3px;
-  margin: 10px;
-  opacity: 60%;
-  object-fit: cover;
-} 
-
+/* WORK STYLES END */
 
 /* CONTACT ME STYLES START */
 
 .contact-info {
-  background-color: black;
+  background-color: var(--black);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -233,9 +242,9 @@ body {
 
 .contact-info h2 {
   font-size: 48px;
-  color: #42a8fc;
+  color: var(--blue);
   padding: 20px;
-  background-color: black;
+  background-color: var(--black);
   background-size: cover;
   text-align: right;
   flex: 1 30%;
@@ -244,11 +253,11 @@ body {
 
 .contact-info a {
   text-decoration: none;
-  color: #42a8fc;
+  color: var(--blue);
 }
 
 .anchors {
-  border-left: 6px solid #42a8fc;
+  border-left: 6px solid var(--blue);
 }
 
 .anchors ul {
@@ -263,8 +272,14 @@ body {
   padding: 10px 15px;
   font-weight: lighter;
   font-size: 1.55vw;
-  border-bottom: 3px solid #dd43b7
+  border-bottom: 3px solid var(--pink);
 }
+
+.anchors ul li a:hover {
+  font-weight: bold;
+}
+
+/* CONTACT ME STYLES END */
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
@@ -323,7 +338,7 @@ body {
     text-align: center;
     width: 300px;
     margin: 10px auto 10px auto;
-    border-bottom: #42a8fc solid 6px;
+    border-bottom: var(--blue) solid 6px;
   }
   
   .all-projects {
@@ -331,11 +346,12 @@ body {
   }
 
   .all-projects.flex-row, .anchors.flex-row, .flex-row {
-    border-left: black 6px solid;
+    border-left: var(--black) 6px solid;
   }
 
   .project-one {
     min-width: initial;
+    max-width: 526px;
   }
 
   .anchors ul {
